@@ -1,0 +1,283 @@
+$primarycolor: #f3c53e;
+$accentcolor: #212642;
+$defaultborder: 1px solid $primarycolor;
+
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	background-color: #f8f8f8;
+}
+
+a{
+	color: $accentcolor !important;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color: $accentcolor !important;
+	}
+	&:active{
+		text-decoration: none;
+		color: $accentcolor !important;
+	}
+}
+.block-link{
+	display: block;
+}
+//signup.html
+.alert{
+	display: none;
+}
+#signup_form{
+
+}
+#login-wrapper{
+	height: 100vh;
+	background-color: $primarycolor;
+}
+
+//login.html
+#login-header{
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 50px;
+	color: $primarycolor !important;
+	a{
+		&:focus{
+			text-decoration: none !important;
+		}
+		&:hover{
+			text-decoration: none !important;
+		}
+	}
+	h1{
+		margin: 0;
+		padding: 10px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.wrapper {	
+  margin-top: 5%;
+  background-color: $primarycolor;
+  padding-bottom: 10px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 1px 3px 20px 1px #717171;  
+	.form-signin-heading{
+		text-transform: capitalize;
+		color: $accentcolor;
+	}
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+	  box-sizing: border-box;
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+	input[type="checkbox"] {
+	  margin-bottom: 20px;
+	}
+
+	input{
+		&:focus{
+			box-shadow: none !important;
+		}
+		&:active{
+			box-shadow: none;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: 5px;	
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+	button{
+		text-transform: uppercase;
+		background-color: $accentcolor;
+		border-radius: 0;
+		border: none;
+		&:hover{
+			background-color: $primarycolor;
+			color: $accentcolor;
+		}
+		&:active{
+			background-color: $primarycolor;
+			color: $accentcolor;
+		}
+	}
+	p{
+		margin-top: 5px;
+		a{
+			color: $primarycolor !important;
+			&:hover{
+				color: $accentcolor !important;
+			}
+		}
+	}
+}
+
+
+// index.html page
+
+#viewport{
+	height: 100vh;
+}
+
+.navbar-default{
+	background-color: $accentcolor;
+	border: none;
+}
+.navbar{
+	border-radius: 0px;
+}
+
+nav{
+	.navbar-brand{
+		color: $primarycolor !important;
+	}
+	.navbar-toggle{
+		border-color: $primarycolor !important;
+		.icon-bar{
+			background-color: $primarycolor !important;
+		}
+		&:hover{
+			background-color: $primarycolor !important;
+			.icon-bar{
+				background-color: $accentcolor !important;
+			}
+		}
+	}
+	#main-nav{
+		li{
+			a{
+				font-size: 12px;
+				text-transform: uppercase;
+				text-align: center;
+				color: $primarycolor !important;			
+				.glyphicon{
+					text-align: center;
+					margin-bottom: 5px;
+				}
+				&:hover{
+					background-color: $primarycolor !important;
+					color: $accentcolor !important;
+				}
+				&:active{
+					background-color: $accentcolor !important;
+					color: $primarycolor !important;
+					border: $defaultborder !important;
+				}
+			}
+		}
+	}
+}
+
+main{
+	height: 80%;
+	#content{
+		margin: 10px 15%;
+		display: flex;
+		flex-flow: column nowrap;
+		align-content: center;
+		justify-content: center;
+		align-items: flex-end;
+		height: 100%;
+		.form-group{
+			margin-bottom: 0px;
+			input{
+				border: 1px solid $accentcolor;
+				box-shadow: none;
+				height: 40px;
+				&:focus{
+						box-shadow: none;
+					}
+			}
+			span{
+				button{
+					border: 1px solid $accentcolor;
+					background-color: $accentcolor;
+					color: #fff;
+					height: 40px;
+					border-radius: 0px;
+					border-top-right-radius: 5px;
+					&:hover{
+						background-color: $primarycolor;
+						border: 1px solid $primarycolor;
+						color: $accentcolor;
+					}
+					&:active{
+						background-color: $primarycolor;
+						border: 1px solid $primarycolor;
+						color: $accentcolor;
+					}
+					&:focus{
+						border: none;
+						box-shadow: none;
+					}
+				}	
+			}
+		}
+		.bottom-btn{
+			color: $accentcolor !important;
+			background-color: $primarycolor;
+			min-width: 88px;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border-top-right-radius: 0px;
+			border-top-left-radius: 0px;
+		}
+		.btn-default{
+			border: none;
+		}
+		#box-toggle{
+			display: none;
+			width: 100%;
+			margin-right:10px; 
+		}
+	}
+}
+footer{
+	background-color: $accentcolor;
+	height: 40px;
+	text-align: center;
+	color: $primarycolor;
+	a{
+		color: $primarycolor !important;
+		padding: 5px;
+		&:hover{
+			color: $primarycolor !important;
+			border: 1px solid $primarycolor;
+		}
+	}
+}
