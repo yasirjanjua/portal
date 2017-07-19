@@ -1,6 +1,4 @@
-$primarycolor: #f3c53e;
-$accentcolor: #212642;
-$defaultborder: 1px solid $primarycolor;
+@import "setting.scss";
 
 *{
 	box-sizing: border-box;
@@ -12,15 +10,15 @@ body{
 }
 
 a{
-	color: $accentcolor !important;
+	color: $accentcolor ;
 	text-decoration: none;
 	&:hover{
 		text-decoration: none;
-		color: $accentcolor !important;
+		color: $accentcolor ;
 	}
 	&:active{
 		text-decoration: none;
-		color: $accentcolor !important;
+		color: $accentcolor ;
 	}
 }
 .block-link{
@@ -30,9 +28,52 @@ a{
 .alert{
 	display: none;
 }
-#signup_form{
 
+.invoice-body{
+  min-width: 360px;
+  max-width: 600px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 1px 3px 20px 1px #717171;
 }
+
+#pack-wrapper{
+	height: 100vh;
+	background-color: $primarycolor;
+}
+
+#pack-header{
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 50px;
+	color: $primarycolor ;
+	a{
+		&:focus{
+			text-decoration: none ;
+		}
+		&:hover{
+			text-decoration: none ;
+		}
+	}
+	h1{
+		margin: 0;
+		padding: 10px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+#pack-dropdown{
+	margin-bottom: 5px;
+}
+
+#amount{
+	margin: 5px 0px;
+}
+
+
 #login-wrapper{
 	height: 100vh;
 	background-color: $primarycolor;
@@ -43,13 +84,13 @@ a{
 	text-transform: uppercase;
 	text-align: center;
 	padding-top: 50px;
-	color: $primarycolor !important;
+	color: $primarycolor ;
 	a{
 		&:focus{
-			text-decoration: none !important;
+			text-decoration: none ;
 		}
 		&:hover{
-			text-decoration: none !important;
+			text-decoration: none ;
 		}
 	}
 	h1{
@@ -62,7 +103,7 @@ a{
 }
 
 .wrapper {	
-  margin-top: 5%;
+  margin-top: 3%;
   background-color: $primarycolor;
   padding-bottom: 10px;
 }
@@ -104,7 +145,7 @@ a{
 
 	input{
 		&:focus{
-			box-shadow: none !important;
+			box-shadow: none ;
 		}
 		&:active{
 			box-shadow: none;
@@ -139,9 +180,9 @@ a{
 	p{
 		margin-top: 5px;
 		a{
-			color: $primarycolor !important;
+			color: $primarycolor ;
 			&:hover{
-				color: $accentcolor !important;
+				color: $accentcolor ;
 			}
 		}
 	}
@@ -164,17 +205,17 @@ a{
 
 nav{
 	.navbar-brand{
-		color: $primarycolor !important;
+		color: $primarycolor ;
 	}
 	.navbar-toggle{
-		border-color: $primarycolor !important;
+		border-color: $primarycolor ;
 		.icon-bar{
-			background-color: $primarycolor !important;
+			background-color: $primarycolor ;
 		}
 		&:hover{
-			background-color: $primarycolor !important;
+			background-color: $primarycolor ;
 			.icon-bar{
-				background-color: $accentcolor !important;
+				background-color: $accentcolor ;
 			}
 		}
 	}
@@ -184,19 +225,19 @@ nav{
 				font-size: 12px;
 				text-transform: uppercase;
 				text-align: center;
-				color: $primarycolor !important;			
+				color: $primarycolor ;			
 				.glyphicon{
 					text-align: center;
 					margin-bottom: 5px;
 				}
 				&:hover{
-					background-color: $primarycolor !important;
-					color: $accentcolor !important;
+					background-color: $primarycolor ;
+					color: $accentcolor ;
 				}
 				&:active{
-					background-color: $accentcolor !important;
-					color: $primarycolor !important;
-					border: $defaultborder !important;
+					background-color: $accentcolor ;
+					color: $primarycolor ;
+					border: $defaultborder ;
 				}
 			}
 		}
@@ -206,13 +247,8 @@ nav{
 main{
 	height: 80%;
 	#content{
-		margin: 10px 15%;
-		display: flex;
-		flex-flow: column nowrap;
-		align-content: center;
-		justify-content: center;
-		align-items: flex-end;
-		height: 100%;
+		position: relative;
+	    width: 100%;
 		.form-group{
 			margin-bottom: 0px;
 			input{
@@ -223,33 +259,10 @@ main{
 						box-shadow: none;
 					}
 			}
-			span{
-				button{
-					border: 1px solid $accentcolor;
-					background-color: $accentcolor;
-					color: #fff;
-					height: 40px;
-					border-radius: 0px;
-					border-top-right-radius: 5px;
-					&:hover{
-						background-color: $primarycolor;
-						border: 1px solid $primarycolor;
-						color: $accentcolor;
-					}
-					&:active{
-						background-color: $primarycolor;
-						border: 1px solid $primarycolor;
-						color: $accentcolor;
-					}
-					&:focus{
-						border: none;
-						box-shadow: none;
-					}
-				}	
-			}
+			
 		}
 		.bottom-btn{
-			color: $accentcolor !important;
+			color: $accentcolor ;
 			background-color: $primarycolor;
 			min-width: 88px;
 			border-bottom-right-radius: 5px;
@@ -273,11 +286,132 @@ footer{
 	text-align: center;
 	color: $primarycolor;
 	a{
-		color: $primarycolor !important;
+		color: $primarycolor ;
 		padding: 5px;
 		&:hover{
-			color: $primarycolor !important;
+			color: $primarycolor ;
 			border: 1px solid $primarycolor;
 		}
 	}
+}
+
+.app-primary-button {
+	text-transform: uppercase;
+    background-color: #212642;
+    border-radius: 0;
+    border: none;
+    color:$beforeHover;
+    &:hover{
+    	 background-color: #f3c53e;
+   		color: #212642;
+    }
+} 
+ .app-search-cotainer {
+  	width: 100%; 
+  	position: relative;
+ }
+
+#advnace-serach{  
+	display: none;
+	position: absolute;
+	top:40px; 
+	background-color: #fff; 
+	width: calc(100% - 0px); 
+	ul{
+		margin: 0px;
+		padding: 0px; 
+		li{
+			list-style: none;
+			display: inline-block;	
+			padding:13px 20px 5px ;
+			input[type=checkbox]{
+				float: left; 
+				margin: 5px 0 0 0;
+			}
+			span{
+				float: left; 
+				margin: 0 0 0 5px;
+				font-size: 16px;
+			}
+		}
+			
+	}
+}
+
+
+
+.app-searchBtn{
+		border:none;
+		background-color: $accentcolor;
+		color: #fff;
+		height: 40px;
+		border-radius: 0px;  
+		width: 80%;
+		border-right: 4px solid $primarycolor;
+		line-height: 30px;
+		font-size:16px;
+		&:hover{
+			background-color: $primarycolor;
+			border-right: 4px solid $accentcolor;
+			color: $accentcolor; 
+
+		}
+		&:active{
+			background-color: $primarycolor;
+			border: 1px solid $primarycolor;
+			color: $accentcolor;
+		}
+		&:focus{
+			border: none;
+			box-shadow: none;
+		}
+} 
+
+
+ .app-searchBtn-advance {
+    width: 20%;
+    float:left;
+	border-radius: 0px;
+	background-color: $primarycolor;
+	border: none;
+	height: 40px;
+	line-height: 30px;
+	font-size:16px;
+ }
+
+
+.search-bar-input {
+	  width: 100%;
+	  border-radius: 0px;
+	  padding: 8px 10px;
+	  font-size: 18px;
+	  max-height: 100%;
+	  height: 40px;
+	  border-right:none; 
+
+}
+
+.moveTopSearchBarBefore{
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+	height: 100%;
+}
+
+.moveTopSearchBarAfter{
+	transition: all 0.5s ease-in;
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+	height: 80px;
+	margin-bottom: 20px;
+}
+#resutlCont {
+	display:none;
 }

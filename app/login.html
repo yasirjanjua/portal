@@ -7,16 +7,15 @@
 		<meta name="descryption" content="This is a signup form for Analog Sea">
 		<title></title>
 		
-		<link rel="stylesheet"  href="css/main.css">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<link rel="stylesheet"  href="css/main.css">
 	</head>
 	<body>
 		<div id="login-wrapper">
@@ -28,11 +27,12 @@
 		<div class="wrapper">
 		    <form class="form-signin" action="index.html">       
 		      <h2 class="form-signin-heading">Please login</h2>
-		      <input type="text" class="form-control" name="username" placeholder="Email Address" required autofocus="" />
+		      <input type="email" class="form-control" name="username" placeholder="Email Address" required autofocus="" />
 		      <input type="password" class="form-control" name="password" placeholder="Password" required/>      
 		      <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
 		      
-		      <button class="btn btn-lg btn-primary btn-block" onclick="index.html" type="submit">Login</button>   
+		      <button class="btn btn-lg btn-primary btn-block" onclick="index.html" type="submit">Login</button>
+		      <p class="text-center">Don't have an account? <a href="signup.html"><strong>Register!</strong></a></p>   
 		    </form>
 		  </div>
 		</div>  
